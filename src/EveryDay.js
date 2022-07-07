@@ -8,16 +8,24 @@ const EveryDay = (props) => {
     const history = useHistory();
   
     let sum = 0;
+    let min = 1;
+    let max = 5;
+    const a = Math.floor(Math.random() * (max - min + 1) + min);
+    const b = Math.floor(Math.random() * (max - min + 1) + min);
+    const c = Math.floor(Math.random() * (max - min + 1) + min);
+    const d = Math.floor(Math.random() * (max - min + 1) + min);
+    const e = Math.floor(Math.random() * (max - min + 1) + min);
+    const f = Math.floor(Math.random() * (max - min + 1) + min);
+    const g = Math.floor(Math.random() * (max - min + 1) + min);
 
-
-    function Circle(){
+    sum += a
+    sum += b
+    sum += c
+    sum += d
+    sum += e
+    sum += f
+    sum += g
     
-      let min = 1;
-      let max = 5;
-      const a = Math.floor(Math.random() * (max - min + 1) + min);
-      
-      console.log(a);
-      sum += a
       // sum
 
       
@@ -40,98 +48,318 @@ const EveryDay = (props) => {
 
       const avgRate = (sum / 7).toFixed(1);
       const [avg, setAvg] = React.useState(avgRate);
-       
-
-      const Circle_count = Array.from({length : a}, (v, i) => i); 
-      const Circle_count2 = Array.from({length : 5 - a}, (v, i) => i);
-      
-  
-      return (
-          <>
-         {Circle_count.map((n, i) => {
-              return(
-              <div
-              key = {i}    
-              style={{
-                     width: "30px",
-                     height: "30px",
-                     borderRadius: "50%",
-                     backgroundColor: "blue",
-                     margin: "5px",
-                     
-              }}
-              >
-              </div>
-              )
-          })}
-  
-          {Circle_count2.map((n, i) => {
-              return(
-              <div 
-              key = {i}        
-              style={{
-                     width: "30px",
-                     height: "30px",
-                     borderRadius: "50%",
-                     backgroundColor: "black",
-                     margin: "5px",
-                    
-              }}  
-              >
-              </div>
-              )
-          })}
-          
-          </>
-  
-      );
-  };
 
     return (
         <div>
         <Title>내 일주일은?</Title>
         <SevenDay>
           월
-          {Circle()} 
+          
+          {Array.from({length : a}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - a}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
           <TriAngle onClick={() => history.push("Monday")}/>
          </SevenDay>
         <SevenDay>
           화
-          {Circle()} 
+          {Array.from({length : b}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - b}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
           <TriAngle onClick={() => history.push("Tuesday")}/>
         </SevenDay>
         <SevenDay>
           수
-          {Circle()}  
+          <>
+          {Array.from({length : c}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - c}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          
+          </> 
           <TriAngle onClick={() => history.push("Wednesday")}/>
         </SevenDay>
         <SevenDay>
           목
-          {Circle()}  
+          <>
+          {Array.from({length : d}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - d}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          </>
+        
           <TriAngle onClick={() => history.push("Thursday")}/>
         </SevenDay>
         <SevenDay>
           금
-          {Circle()} 
+          <>
+          {Array.from({length : e}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - e}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          </>
+          
           <TriAngle onClick={() => history.push("Friday")}/>
         </SevenDay>
         <SevenDay>
           토
-          {Circle()} 
+          <>
+          {Array.from({length : f}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - f}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          </>
+         
           <TriAngle onClick={() => history.push("Saturday")}/>
         </SevenDay>
         <SevenDay>
           일
-          {Circle()}  
+          <>
+          {Array.from({length : g}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "blue", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          {Array.from({length : 5 - g}, (v, i) => {
+            return(
+              <div
+              key = {i}
+              style={{
+               width: "30px",
+               height: "30px",
+               borderRadius: "50%",
+               backgroundColor:  "black", 
+               margin: "5px",
+               cursor: "pointer",
+              }} 
+              >
+              </div>
+
+            )
+          
+          })}
+          </>
+         
           <TriAngle onClick={() => history.push("Sunday")}/>
         </SevenDay>
      
         <Average>
-        평균평점 
+        평균평점
+        <br />
+        
+        {avg}
         
         </Average>
         <SevenDay>
-        <ResetBtn>RESET</ResetBtn>
+        <ResetBtn onClick={()=> {
+          setAvg(parseInt(0).toFixed(1));
+        }}> RESET</ResetBtn>
         </SevenDay>
         
         </div>
